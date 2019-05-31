@@ -23,17 +23,17 @@ init_data() {
 	ln -sf ${DATA}/etc /etc/bind
 
 
-	# if not directory /lib then create
-	if [[ ! -d ${DATA}/lib ]];
+	# if not directory /var then create
+	if [[ ! -d ${DATA}/var ]];
 	then
-		mkdir -p ${DATA}/lib
+		mv /var/bind ${DATA}/var
 	fi
 	
 	# delete old location
 	rm -rf /var/bind
 	
 	# link old location to new directory
-	ln -sf ${DATA}/lib /var/bind
+	ln -sf ${DATA}/var /var/bind
 }
 
 init_data
