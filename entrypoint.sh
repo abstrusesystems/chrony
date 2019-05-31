@@ -21,9 +21,23 @@ init_data() {
 	
 	# link old location to new directory
 	ln -sf ${DATA}/etc /etc/bind
+
+
+	# if not directory /lib then create
+	if [[ ! -d ${DATA}/lib ]];
+	then
+		mkdir -p ${DATA}/lib
+	fi
+	
+	# delete old location
+	rm -rf /var/bind
+	
+	# link old location to new directory
+	ln -sf ${DATA}/lib /var/bind
 }
 
 init_data
 
 # run CMD
 exec "$@"
+
