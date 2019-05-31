@@ -4,6 +4,3 @@
 set -e
 
 echo ${DATA}
-
-# run CMD
-exec "$@"
