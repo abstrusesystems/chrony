@@ -38,6 +38,11 @@ init_data() {
 
 init_data
 
+#check for bind configuration in default location
+if [[ ! -f ${DATA}/etc/named.conf ]]
+then
+	echo "Please place your bind9 configuration in `${DATA}`/etc/named.conf"
+fi
+
 # run CMD
 exec "$@"
-
