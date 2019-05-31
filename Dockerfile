@@ -1,4 +1,4 @@
-FROM alpine/alpine:latest
+FROM alpine:latest
 MAINTAINER github -at- abstruse -dot- systems
 
 #ENV DATA_DIR=/data \
