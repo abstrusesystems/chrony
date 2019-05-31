@@ -13,7 +13,7 @@ RUN apk add --update --no-cache bind
 
 EXPOSE 53/udp 53/tcp
 
-VOLUME ["${DATA_DIR}"]
+#VOLUME ["${DATA_DIR}"]
 
 #ENTRYPOINT ["/sbin/entrypoint.sh"]
 
