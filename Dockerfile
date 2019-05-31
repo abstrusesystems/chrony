@@ -12,6 +12,6 @@ EXPOSE 53/udp 53/tcp
 
 VOLUME ["${DATA}"]
 
-ENTRYPOINT ["/sbin/entrypoint.sh"]
+ENTRYPOINT ["sh","/sbin/entrypoint.sh"]
 
 CMD ["/usr/sbin/named"]
