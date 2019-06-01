@@ -43,4 +43,5 @@ then
 fi
 
 # run CMD
+echo "Running '$@'"
 exec "$@"
