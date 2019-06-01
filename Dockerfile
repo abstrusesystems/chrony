@@ -14,4 +14,4 @@ VOLUME ["${DATA}"]
 
 ENTRYPOINT ["sh","/sbin/entrypoint.sh"]
 
-CMD ["/usr/sbin/named","-f"]
+CMD ["/usr/sbin/named","-g"]
