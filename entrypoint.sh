@@ -11,7 +11,7 @@ init_data() {
 	# if not directory /etc then create
 	if [[ ! -d ${DATA}/etc ]];
 	then
-#		mv /etc/chrony ${DATA}/etc
+		cp /etc/chrony ${DATA}/etc
 	fi
 	
 	# delete old location
@@ -24,7 +24,7 @@ init_data() {
 	# if not directory /var then create
 	if [[ ! -d ${DATA}/var ]];
 	then
-#		mv /var/lib/chrony ${DATA}/var
+		cp /var/lib/chrony ${DATA}/var
 	fi
 	
 	# delete old location
