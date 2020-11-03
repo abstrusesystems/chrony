@@ -3,7 +3,7 @@ LABEL maintainer="github -at- abstruse -dot- systems"
 
 ENV DATA=/srv/chrony
 
-RUN apk add --update --no-cache bind
+RUN apk add --update --no-cache chrony
 
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
