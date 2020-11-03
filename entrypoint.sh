@@ -6,7 +6,7 @@ set -e
 # initialize data directory
 init_data() {
 	# create root directory
-	mkdir -p ${DATA}
+#	mkdir -p ${DATA}
 	
 	# if not directory /etc then create
 #	if [[ ! -d ${DATA}/etc ]];
