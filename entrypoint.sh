@@ -5,6 +5,7 @@ set -e
 
 # initialize data directory
 init_data() {
+	echo "This page left intentionally blank."
 	# create root directory
 #	mkdir -p ${DATA}
 	
