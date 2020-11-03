@@ -9,10 +9,10 @@ init_data() {
 	mkdir -p ${DATA}
 	
 	# if not directory /etc then create
-	if [[ ! -d ${DATA}/etc ]];
-	then
-		cp /etc/chrony ${DATA}/etc
-	fi
+#	if [[ ! -d ${DATA}/etc ]];
+#	then
+#		cp /etc/chrony ${DATA}/etc
+#	fi
 	
 	# delete old location
 #	rm -rf /etc/chrony
@@ -22,10 +22,10 @@ init_data() {
 
 
 	# if not directory /var then create
-	if [[ ! -d ${DATA}/var ]];
-	then
-		cp /var/lib/chrony ${DATA}/var
-	fi
+#	if [[ ! -d ${DATA}/var ]];
+#	then
+#		cp /var/lib/chrony ${DATA}/var
+#	fi
 	
 	# delete old location
 #	rm -rf /var/lib/chrony
