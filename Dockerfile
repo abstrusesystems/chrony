@@ -1,17 +1,17 @@
 FROM alpine:latest
 LABEL maintainer="github -at- abstruse -dot- systems"
 
-ENV DATA=/srv/bind
+ENV DATA=/srv/chrony
 
 RUN apk add --update --no-cache bind
 
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 
-EXPOSE 53/udp 53/tcp
+EXPOSE 123/udp
 
 VOLUME ["${DATA}"]
 
 ENTRYPOINT ["sh","/sbin/entrypoint.sh"]
 
-CMD ["/usr/sbin/named","-g"]
+CMD ["/usr/sbin/chronyd"]
