@@ -11,27 +11,27 @@ init_data() {
 	# if not directory /etc then create
 	if [[ ! -d ${DATA}/etc ]];
 	then
-		mv /etc/chrony ${DATA}/etc
+#		mv /etc/chrony ${DATA}/etc
 	fi
 	
 	# delete old location
-	rm -rf /etc/chrony
+#	rm -rf /etc/chrony
 	
 	# link old location to new directory
-	ln -sf ${DATA}/etc /etc/chrony
+#	ln -sf ${DATA}/etc /etc/chrony
 
 
 	# if not directory /var then create
 	if [[ ! -d ${DATA}/var ]];
 	then
-		mv /var/lib/chrony ${DATA}/var
+#		mv /var/lib/chrony ${DATA}/var
 	fi
 	
 	# delete old location
-	rm -rf /var/lib/chrony
+#	rm -rf /var/lib/chrony
 	
 	# link old location to new directory
-	ln -sf ${DATA}/var /var/lib/chrony
+#	ln -sf ${DATA}/var /var/lib/chrony
 }
 
 init_data
